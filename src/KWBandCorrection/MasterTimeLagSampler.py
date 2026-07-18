@@ -1,4 +1,4 @@
-#Master time lag MC sampler
+#MC sampler that samples corrected time lags using a power law index determined from comparison of W1 and W2 time lags
 #Samples from the time lag error margins to produce gammas and corrected time lags
 #Produces 10,000, sampled, corrected time lags for each object
 
@@ -566,7 +566,7 @@ for i in range(10000):
             gam = math.log10(W2/W1)/math.log10(4.6/3.4) #Find the power laws corresponding to the given ratio; uses WISE nominal wavelengths W1 = 3.4 and W2 = 4.6
             
             #Append the raw sampled value to lists of lists (each sublist = distribution of sampled values for each object)
-            if len(sTauW1)-1 !=j and len(sTauW2)-1 != j:
+            if len(sTauW1) != len(modeW1) and len(sTauW2)!= len(modeW2):
                 sTauW1.append([W1])
                 sTauW2.append([W2])
                 ratios.append([W2/W1])
@@ -581,7 +581,7 @@ for i in range(10000):
                 sTauW2Corr[j].append((W2*((1+zCMB[j])**gam)*(2.2**gam))/(4.6**gam))
                 sTauW1Corr[j].append((W1*((1+zCMB[j])**gam)*(2.2**gam))/(3.4**gam))                
         else:
-            if len(sTauW1)-1 !=j and len(sTauW2)-1 != j:
+            if len(sTauW1) != len(modeW1) and len(sTauW2)!= len(modeW2):
                 sTauW1.append(["none"])
                 sTauW2.append(["none"])
                 ratios.append(["none"])
@@ -591,10 +591,13 @@ for i in range(10000):
     
 #Calculate distribution of median gammas from which to sample from for objects without a W1 and W2 lag
 for i in gammas:
-    if i != "none":
+    if i[0] != "none":
         medGammaDistr.append(statistics.median(i))
 
+print(statistics.median(medGammaDistr))
+
 #Sample from the distribution of median gammas and from the errors of each object to get corrected time lags for each object without a W1 and W2 lag 
+#This assumes that the sampled W1 or W2 lag is independent from gamma in isolation (i.e. gamma can't be determined without both)
 for i in range(len(modeW1)):
     if sTauW1Corr[i][0] == "none" and modeW1[i] != "none":
         sTauW1Corr[i] = []
@@ -604,3 +607,14 @@ for i in range(len(modeW1)):
         sTauW2Corr[i] = []
         for i in range(10000):
             sTauW2Corr[i].append((sampleSplitNormal(modeW2[i],W2err[i],W2Err[i])*((1+zCMB[i])**random.choice(medGammaDistr))*(2.2**random.choice(medGammaDistr)))/(3.4**random.choice(medGammaDistr)))
+
+medianTauW1= []
+medianTauW2 = []
+for i in range(len(sTauW2Corr)):
+    medianTauW1.append(f"{statistics.median(sTauW1Corr[i])} \n")
+    medianTauW2.append(f"{statistics.median(sTauW2Corr[i])} \n")
+    
+with open("SampledTauW1.txt", "w") as file:
+    file.writelines(medianTauW1)
+with open("SampledTauW2.txt", "w") as file:
+    file.writelines(medianTauW2)
