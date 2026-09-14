@@ -34,8 +34,9 @@ magnumTog = True # Toggle whether MAGNUM data set is integrated with WISE fits
 omgTog = False  # Toggle whether omg_0 is freely fitted
 H0Tog = True # Toggle whether H0 is freely fitted
 
-flowCorrTog = False # TODO:Toggle use of flow corrected redshifts for MAGNUM objects
-
+propTog = True # Toggle use of WISE lag correction from R-L intercept proportionality 
+alphSampTog = True # Toggle use of alphaUV sampled values for the g calibration constant
+flowCorrTog = True # TODO:Toggle use of flow corrected redshifts for MAGNUM objects
 
 if propTog:
 
