@@ -1,0 +1,33 @@
+TODO:
+
+]]] = done
+
+listed in order of importance:
+
+1. Get Bayesian fit working:
+- Get intrinsic scatter fit working ]]], use that in the MPFIT file (think about fitting an intrinsic scatter cut?) 
+- Get Bayesian fit working for all different test groups (kde table building is what's slow, many pymc instances is fast)
+- MAGNUM vs no MAGNUM integration
+- Plotting with matplot
+- Omg_0 fitting with fixed H0 (do not use the MAGNUM-WISE proportionality here bc circularity)
+
+2. Work on alpha sampling
+- Potential third, far UV alpha for calculating
+
+3. Get best values for MAGNUM-WISE proportionality
+- With and without alpha sampling: Rerun and clearly record
+
+4. Get all final values and plots
+- For MPFIT
+- For Bayesian
+- For H0, omg_0
+- With and without proportionality between MAGNUM and WISE
+- with and without alpha sampling
+
+5. Get systematic uncertainties
+- Refit after varying Tsub, and dust distribution to get remaining systematic uncertainties
+
+6. Test edge cases
+- ex. alpha set to 1/3 (theoretical value across spectrum)
+
+7. Cleanup code files, polish github repo, HAVE ALL FINAL RESULTS AND FIGURES RECORDED
