@@ -7,15 +7,15 @@ $$
 g = 2.5\log_{10}\left(
 \frac{
 16\pi c^2
-\displaystyle\int_{a_{\min}}^{a_{\max}}
+\int_{a_{\min}}^{a_{\max}}
 a^{2-p}
-\displaystyle\int_{\mathrm{NIR}}
+\int_{\mathrm{NIR}}
 Q_{\nu}(a)B_{\nu}(T_{\mathrm{sub}})\,d\nu\,da
 }{
 L_0
-\displaystyle\int_{a_{\min}}^{a_{\max}}
+\int_{a_{\min}}^{a_{\max}}
 a^{2-p}
-\displaystyle\int_{\mathrm{UV}}
+\int_{\mathrm{UV}}
 Q_{\nu}(a)
 \left(\frac{\nu}{\nu_V}\right)^{\alpha_{\mathrm{UV}}}
 \,d\nu\,da
