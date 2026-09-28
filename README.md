@@ -17,5 +17,6 @@ L_0 \int_{a_{\min}}^{a_{\max}} a^{2-p}
 \int_{\mathrm{UV}} Q_{\nu}(a)
 \left(\frac{\nu}{\nu_V}\right)^{\alpha_{\mathrm{UV}}}\,d\nu\,da
 }
-\right)\$
+\right)\$ 
+
 *This equation is not given explicitly by Y14, but is rederived by the researcher from Yoshii's descriptions*
