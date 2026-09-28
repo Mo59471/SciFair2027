@@ -1,4 +1,5 @@
-# AGN Dust Reverberation Mapping for the Hubble Constant: Methodological Improvements, Data Expansion, and New Cosmology Constraints
+# AGN Dust Reverberation Mapping for the Hubble Constant: 
+## Methodological Improvements, Data Expansion, and New Cosmology Constraints
 ## Mo Spiegel: moshespieg@gmail.com
 ### Project Background:
 This research is ongoing, and began in June 2026. This research focuses on the use of dust reverberation mapping (DRM) of the obscuring tori in active galactic nuclei (AGN), to infer AGN central engine luminosities and therefore extract cosmological distances that can be used to measure the Hubble Constant.\
