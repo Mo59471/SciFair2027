@@ -1,2 +1,3 @@
-# SciFair2027
-2027 science fair project, focusing on utilizing dust reverberation time lags as probes of AGN luminosity for cosmological applications.
+# AGN Dust Reverberation Mapping for the Hubble Constant: Methodological Improvements, Data Expansion, and New Cosmology Constraints
+## Mo Spiegel
+### Contact: moshespieg@gmail.com
