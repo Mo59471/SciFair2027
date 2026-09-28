@@ -6,19 +6,12 @@ This research is ongoing, and began in June 2026. This research focuses on the u
 $$
 g = 2.5\log_{10}\left(
 \frac{
-16\pi c^2
-\int_{a_{\min}}^{a_{\max}}
-a^{2-p}
-\int_{\mathrm{NIR}}
-Q_{\nu}(a)B_{\nu}(T_{\mathrm{sub}})\,d\nu\,da
+16\pi c^2 \int_{a_{\min}}^{a_{\max}} a^{2-p}
+\int_{\mathrm{NIR}} Q_{\nu}(a)B_{\nu}(T_{\mathrm{sub}})\,d\nu\,da
 }{
-L_0
-\int_{a_{\min}}^{a_{\max}}
-a^{2-p}
-\int_{\mathrm{UV}}
-Q_{\nu}(a)
-\left(\frac{\nu}{\nu_V}\right)^{\alpha_{\mathrm{UV}}}
-\,d\nu\,da
+L_0 \int_{a_{\min}}^{a_{\max}} a^{2-p}
+\int_{\mathrm{UV}} Q_{\nu}(a)
+\left(\frac{\nu}{\nu_V}\right)^{\alpha_{\mathrm{UV}}}\,d\nu\,da
 }
 \right)
 $$
